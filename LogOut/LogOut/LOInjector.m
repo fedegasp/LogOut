@@ -1,5 +1,5 @@
 //
-//  FGInjector.h
+//  LOInjector.m
 //  LogOut
 //
 //  Created by Federico Gasperini on 06/06/2020.
@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LOInjector.h"
 
-NS_ASSUME_NONNULL_BEGIN
+@implementation LOInjector
 
-@interface FGInjector : NSObject
+static void __attribute__((constructor)) initialize(void) {
+    NSLog(@"Injection started");
+}
 
 @end
-
-NS_ASSUME_NONNULL_END

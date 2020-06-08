@@ -15,14 +15,16 @@
 		7A69F6FB248B6ADD0083AF49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A69F6F9248B6ADD0083AF49 /* LaunchScreen.storyboard */; };
 		7A69F706248B6ADD0083AF49 /* testappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A69F705248B6ADD0083AF49 /* testappTests.swift */; };
 		7A69F711248B6ADD0083AF49 /* testappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A69F710248B6ADD0083AF49 /* testappUITests.swift */; };
-		7A69F71E248B7F7B0083AF49 /* FGInjector.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A69F71C248B7F7B0083AF49 /* FGInjector.h */; };
-		7A69F71F248B7F7B0083AF49 /* FGInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A69F71D248B7F7B0083AF49 /* FGInjector.m */; };
+		7A69F71E248B7F7B0083AF49 /* LOInjector.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A69F71C248B7F7B0083AF49 /* LOInjector.h */; };
+		7A69F71F248B7F7B0083AF49 /* LOInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A69F71D248B7F7B0083AF49 /* LOInjector.m */; };
 		7A69F723248B80100083AF49 /* LogOut.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB039F6248A26870007E0E4 /* LogOut.framework */; };
 		7A69F725248B80230083AF49 /* LogOut.framework in Embedd Framework */ = {isa = PBXBuildFile; fileRef = 7AB039F6248A26870007E0E4 /* LogOut.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		7A69F727248BD92E0083AF49 /* FGPipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A69F726248BD92E0083AF49 /* FGPipe.swift */; };
+		7A69F727248BD92E0083AF49 /* Pipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A69F726248BD92E0083AF49 /* Pipe.swift */; };
 		7AB03A00248A26870007E0E4 /* LogOut.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB039F6248A26870007E0E4 /* LogOut.framework */; };
 		7AB03A05248A26870007E0E4 /* LogOutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB03A04248A26870007E0E4 /* LogOutTests.swift */; };
 		7AB03A07248A26870007E0E4 /* LogOut.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB039F9248A26870007E0E4 /* LogOut.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7ABAEF4A248E119E00C83484 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABAEF49248E119E00C83484 /* Logger.swift */; };
+		7ABAEF4C248E150A00C83484 /* PipeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABAEF4B248E150A00C83484 /* PipeReader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,15 +87,17 @@
 		7A69F70C248B6ADD0083AF49 /* testappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A69F710248B6ADD0083AF49 /* testappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testappUITests.swift; sourceTree = "<group>"; };
 		7A69F712248B6ADD0083AF49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7A69F71C248B7F7B0083AF49 /* FGInjector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FGInjector.h; sourceTree = "<group>"; };
-		7A69F71D248B7F7B0083AF49 /* FGInjector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FGInjector.m; sourceTree = "<group>"; };
-		7A69F726248BD92E0083AF49 /* FGPipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FGPipe.swift; sourceTree = "<group>"; };
+		7A69F71C248B7F7B0083AF49 /* LOInjector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LOInjector.h; sourceTree = "<group>"; };
+		7A69F71D248B7F7B0083AF49 /* LOInjector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LOInjector.m; sourceTree = "<group>"; };
+		7A69F726248BD92E0083AF49 /* Pipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pipe.swift; sourceTree = "<group>"; };
 		7AB039F6248A26870007E0E4 /* LogOut.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LogOut.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AB039F9248A26870007E0E4 /* LogOut.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogOut.h; sourceTree = "<group>"; };
 		7AB039FA248A26870007E0E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7AB039FF248A26870007E0E4 /* LogOutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogOutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AB03A04248A26870007E0E4 /* LogOutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutTests.swift; sourceTree = "<group>"; };
 		7AB03A06248A26870007E0E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7ABAEF49248E119E00C83484 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		7ABAEF4B248E150A00C83484 /* PipeReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipeReader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,9 +218,11 @@
 			children = (
 				7AB039F9248A26870007E0E4 /* LogOut.h */,
 				7AB039FA248A26870007E0E4 /* Info.plist */,
-				7A69F71C248B7F7B0083AF49 /* FGInjector.h */,
-				7A69F71D248B7F7B0083AF49 /* FGInjector.m */,
-				7A69F726248BD92E0083AF49 /* FGPipe.swift */,
+				7A69F71C248B7F7B0083AF49 /* LOInjector.h */,
+				7A69F71D248B7F7B0083AF49 /* LOInjector.m */,
+				7A69F726248BD92E0083AF49 /* Pipe.swift */,
+				7ABAEF49248E119E00C83484 /* Logger.swift */,
+				7ABAEF4B248E150A00C83484 /* PipeReader.swift */,
 			);
 			path = LogOut;
 			sourceTree = "<group>";
@@ -238,7 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AB03A07248A26870007E0E4 /* LogOut.h in Headers */,
-				7A69F71E248B7F7B0083AF49 /* FGInjector.h in Headers */,
+				7A69F71E248B7F7B0083AF49 /* LOInjector.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,8 +466,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A69F727248BD92E0083AF49 /* FGPipe.swift in Sources */,
-				7A69F71F248B7F7B0083AF49 /* FGInjector.m in Sources */,
+				7ABAEF4C248E150A00C83484 /* PipeReader.swift in Sources */,
+				7ABAEF4A248E119E00C83484 /* Logger.swift in Sources */,
+				7A69F727248BD92E0083AF49 /* Pipe.swift in Sources */,
+				7A69F71F248B7F7B0083AF49 /* LOInjector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

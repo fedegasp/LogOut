@@ -9,12 +9,12 @@
 import XCTest
 @testable import LogOut
 
-class LogOutTests: XCTestCase {
+class LogOutTests: XCTestCase, PipeReaderDelegate {
     
     let readQueue = DispatchQueue.global()
 
     func testPipe() throws {
-        var pipe: FGPipe! = FGPipe(file: STDOUT_FILENO)
+        var pipe: LogOut.Pipe! = Pipe(file: STDOUT_FILENO)
         let readExpt = XCTestExpectation(description: "readPipe")
         
         XCTAssertFalse(pipe.errorPipe)
@@ -49,4 +49,20 @@ class LogOutTests: XCTestCase {
         print("test")
     }
 
+    
+    var expectation: XCTestExpectation?
+    func testPipeReader() throws {
+        let pipeReader = PipeReader(fd: STDOUT_FILENO, delegate: self)
+        self.expectation = XCTestExpectation(description: "pipeReader")
+        pipeReader.stop()
+        wait(for: [self.expectation!], timeout: 1.0)
+    }
+    
+    func pipe(reader: PipeReader, didRead: Data) {
+        
+    }
+    
+    func pipeReaderDidEnd(_ reader: PipeReader) {
+        self.expectation?.fulfill()
+    }
 }
