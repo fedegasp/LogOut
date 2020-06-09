@@ -33,7 +33,8 @@ class PipeReader {
     func stop() {
         let pipe = self.pipe
         self.pipe = nil
-        pipe?.write("\0".data(using: .utf8)!)
+        // to write a byte is needed to make the reading loop continue and fail the test
+        _=pipe?.write("\0".data(using: .utf8)!)
     }
     
     deinit {

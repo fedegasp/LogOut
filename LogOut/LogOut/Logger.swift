@@ -15,3 +15,11 @@ struct Logger {
         os_log("%@", log: Logger.fg, type: .info, string)
     }
 }
+
+// exposing the struct through a class
+@objc(LOLogger)
+public class OBJLogger: NSObject {
+    @objc public static func log(_ string: String) {
+        Logger.log(string)
+    }
+}

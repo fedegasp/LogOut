@@ -8,11 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "LOInjector.h"
+#import <LogOut/LogOut-Swift.h>
 
 @implementation LOInjector
 
 static void __attribute__((constructor)) initialize(void) {
-    NSLog(@"Injection started");
+    [LOLogger log:@"Injection started"];
 }
 
 @end
