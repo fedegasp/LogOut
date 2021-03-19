@@ -54,11 +54,11 @@ class Pipe {
     
     func read() -> Data? {
         let buffer = UnsafeMutableRawPointer.allocate(byteCount: 1024, alignment: 1)
-        let count = LogOut.read(self.pipeFiles[0], buffer, 1024)
+        let count = Darwin.read(self.pipeFiles[0], buffer, 1024)
         var ret: Data? = nil
         if count > 0 {
             if split {
-                LogOut.write(self.backupFD, buffer, count)
+                Darwin.write(self.backupFD, buffer, count)
             }
             ret = Data(bytes: buffer, count: count)
         }
@@ -70,7 +70,7 @@ class Pipe {
         return data.withUnsafeBytes { (buffer) -> Int in
             let unsafeBufferPtr = buffer.bindMemory(to: UInt8.self)
             if let unsafePtr = unsafeBufferPtr.baseAddress {
-                return LogOut.write(self.pipeFiles[1], unsafePtr, data.count)
+                return Darwin.write(self.pipeFiles[1], unsafePtr, data.count)
             }
             return 0
         }

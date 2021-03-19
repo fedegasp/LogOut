@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A12B26D260513D900DAEEC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A12B26C260513D900DAEEC6 /* Main.storyboard */; };
+		7A12B2772605141100DAEEC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A12B2762605141100DAEEC6 /* ViewController.swift */; };
 		7A69F6EF248B6ADB0083AF49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A69F6EE248B6ADB0083AF49 /* AppDelegate.swift */; };
-		7A69F6F1248B6ADB0083AF49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A69F6F0248B6ADB0083AF49 /* SceneDelegate.swift */; };
-		7A69F6F3248B6ADB0083AF49 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A69F6F2248B6ADB0083AF49 /* ContentView.swift */; };
 		7A69F6F5248B6ADD0083AF49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A69F6F4248B6ADD0083AF49 /* Assets.xcassets */; };
 		7A69F6F8248B6ADD0083AF49 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A69F6F7248B6ADD0083AF49 /* Preview Assets.xcassets */; };
 		7A69F6FB248B6ADD0083AF49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A69F6F9248B6ADD0083AF49 /* LaunchScreen.storyboard */; };
@@ -73,10 +73,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7A12B26C260513D900DAEEC6 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		7A12B2762605141100DAEEC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7A69F6EC248B6ADB0083AF49 /* testapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A69F6EE248B6ADB0083AF49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7A69F6F0248B6ADB0083AF49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7A69F6F2248B6ADB0083AF49 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7A69F6F4248B6ADD0083AF49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A69F6F7248B6ADD0083AF49 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7A69F6FA248B6ADD0083AF49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -145,9 +145,9 @@
 			isa = PBXGroup;
 			children = (
 				7A69F6EE248B6ADB0083AF49 /* AppDelegate.swift */,
-				7A69F6F0248B6ADB0083AF49 /* SceneDelegate.swift */,
-				7A69F6F2248B6ADB0083AF49 /* ContentView.swift */,
+				7A12B2762605141100DAEEC6 /* ViewController.swift */,
 				7A69F6F4248B6ADD0083AF49 /* Assets.xcassets */,
+				7A12B26C260513D900DAEEC6 /* Main.storyboard */,
 				7A69F6F9248B6ADD0083AF49 /* LaunchScreen.storyboard */,
 				7A69F6FC248B6ADD0083AF49 /* Info.plist */,
 				7A69F6F6248B6ADD0083AF49 /* Preview Content */,
@@ -402,6 +402,7 @@
 				7A69F6FB248B6ADD0083AF49 /* LaunchScreen.storyboard in Resources */,
 				7A69F6F8248B6ADD0083AF49 /* Preview Assets.xcassets in Resources */,
 				7A69F6F5248B6ADD0083AF49 /* Assets.xcassets in Resources */,
+				7A12B26D260513D900DAEEC6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,9 +441,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A12B2772605141100DAEEC6 /* ViewController.swift in Sources */,
 				7A69F6EF248B6ADB0083AF49 /* AppDelegate.swift in Sources */,
-				7A69F6F1248B6ADB0083AF49 /* SceneDelegate.swift in Sources */,
-				7A69F6F3248B6ADB0083AF49 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,14 +525,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"testapp/Preview Content\"";
-				DEVELOPMENT_TEAM = 6T6ZD52R57;
+				DEVELOPMENT_TEAM = 6SMUU2CW9K;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = testapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = fg.testapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fg.testapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -546,14 +547,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"testapp/Preview Content\"";
-				DEVELOPMENT_TEAM = 6T6ZD52R57;
+				DEVELOPMENT_TEAM = 6SMUU2CW9K;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = testapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = fg.testapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fg.testapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -771,12 +773,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 6T6ZD52R57;
+				DEVELOPMENT_TEAM = 6SMUU2CW9K;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = LogOut/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -798,12 +801,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 6T6ZD52R57;
+				DEVELOPMENT_TEAM = 6SMUU2CW9K;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = LogOut/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
