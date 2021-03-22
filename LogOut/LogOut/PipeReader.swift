@@ -24,7 +24,7 @@ class PipeReader {
         return pipe != nil
     }
     
-    init(fd: Int32, delegate: PipeReaderDelegate) {
+    init(fd: Int32, delegate: PipeReaderDelegate?) {
         self.delegate = delegate
         self.pipe = LogOut.Pipe(file: fd)
         self.startReading()

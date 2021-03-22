@@ -3,12 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		7A12B26D260513D900DAEEC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A12B26C260513D900DAEEC6 /* Main.storyboard */; };
 		7A12B2772605141100DAEEC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A12B2762605141100DAEEC6 /* ViewController.swift */; };
+		7A453A47260892D200CD3B8C /* LogRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A453A46260892D200CD3B8C /* LogRouter.swift */; };
+		7A453A4D2608994E00CD3B8C /* WebSocketSink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A453A4C2608994E00CD3B8C /* WebSocketSink.swift */; };
+		7A453A5426089A2700CD3B8C /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = 7A453A5326089A2700CD3B8C /* Starscream */; };
 		7A69F6EF248B6ADB0083AF49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A69F6EE248B6ADB0083AF49 /* AppDelegate.swift */; };
 		7A69F6F5248B6ADD0083AF49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A69F6F4248B6ADD0083AF49 /* Assets.xcassets */; };
 		7A69F6F8248B6ADD0083AF49 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A69F6F7248B6ADD0083AF49 /* Preview Assets.xcassets */; };
@@ -75,6 +78,8 @@
 /* Begin PBXFileReference section */
 		7A12B26C260513D900DAEEC6 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7A12B2762605141100DAEEC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7A453A46260892D200CD3B8C /* LogRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogRouter.swift; sourceTree = "<group>"; };
+		7A453A4C2608994E00CD3B8C /* WebSocketSink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketSink.swift; sourceTree = "<group>"; };
 		7A69F6EC248B6ADB0083AF49 /* testapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A69F6EE248B6ADB0083AF49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A69F6F4248B6ADD0083AF49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -127,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A453A5426089A2700CD3B8C /* Starscream in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +229,8 @@
 				7A69F726248BD92E0083AF49 /* Pipe.swift */,
 				7ABAEF49248E119E00C83484 /* Logger.swift */,
 				7ABAEF4B248E150A00C83484 /* PipeReader.swift */,
+				7A453A46260892D200CD3B8C /* LogRouter.swift */,
+				7A453A4C2608994E00CD3B8C /* WebSocketSink.swift */,
 			);
 			path = LogOut;
 			sourceTree = "<group>";
@@ -320,6 +328,9 @@
 			dependencies = (
 			);
 			name = LogOut;
+			packageProductDependencies = (
+				7A453A5326089A2700CD3B8C /* Starscream */,
+			);
 			productName = LogOut;
 			productReference = 7AB039F6248A26870007E0E4 /* LogOut.framework */;
 			productType = "com.apple.product-type.framework";
@@ -381,6 +392,9 @@
 				Base,
 			);
 			mainGroup = 7AB039EC248A26870007E0E4;
+			packageReferences = (
+				7A453A5226089A2700CD3B8C /* XCRemoteSwiftPackageReference "Starscream" */,
+			);
 			productRefGroup = 7AB039F7248A26870007E0E4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -468,7 +482,9 @@
 			files = (
 				7ABAEF4C248E150A00C83484 /* PipeReader.swift in Sources */,
 				7ABAEF4A248E119E00C83484 /* Logger.swift in Sources */,
+				7A453A4D2608994E00CD3B8C /* WebSocketSink.swift in Sources */,
 				7A69F727248BD92E0083AF49 /* Pipe.swift in Sources */,
+				7A453A47260892D200CD3B8C /* LogRouter.swift in Sources */,
 				7A69F71F248B7F7B0083AF49 /* LOInjector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -525,7 +541,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"testapp/Preview Content\"";
-				DEVELOPMENT_TEAM = 6SMUU2CW9K;
+				DEVELOPMENT_TEAM = A9QK5Z4XBH;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = testapp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -547,7 +563,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"testapp/Preview Content\"";
-				DEVELOPMENT_TEAM = 6SMUU2CW9K;
+				DEVELOPMENT_TEAM = A9QK5Z4XBH;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = testapp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -917,6 +933,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7A453A5226089A2700CD3B8C /* XCRemoteSwiftPackageReference "Starscream" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/daltoniam/Starscream.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7A453A5326089A2700CD3B8C /* Starscream */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A453A5226089A2700CD3B8C /* XCRemoteSwiftPackageReference "Starscream" */;
+			productName = Starscream;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7AB039ED248A26870007E0E4 /* Project object */;
 }
